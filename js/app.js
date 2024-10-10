@@ -2,25 +2,18 @@ const hiddenElements = document.querySelectorAll('.hidden-element');
 
 console.log(hiddenElements)
 
-if (window.innerWidth < 760) {
-  hiddenElements.forEach(element => {
-    element.classList.add('show');
-    element.classList.remove('hidden-element');
-  });
-} else {
-  const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-          if (entry.isIntersecting) {
-              entry.target.classList.add('show');
-              observer.unobserve(entry.target);
-          }
-      });
-  }, { threshold: 0.5 });
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
 
-  hiddenElements.forEach(element => {
-      observer.observe(element);
-  });
-}
+hiddenElements.forEach(element => {
+    observer.observe(element);
+});
 
 
 let menuLinks = document.querySelectorAll('.menu-link');
