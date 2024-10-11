@@ -700,7 +700,7 @@ body{
     right: auto;
     left: -100px;
     top: 0px;
-    z-index: 9999;
+    z-index: 99999999;
   }
   .instagram:hover .social-image {
     max-width: 100px;
