@@ -1,7 +1,5 @@
 const hiddenElements = document.querySelectorAll('.hidden-element');
 
-console.log(hiddenElements)
-
 const observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
