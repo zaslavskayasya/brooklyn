@@ -245,15 +245,7 @@ textarea {
   }
 }
 
-body{
-  background: linear-gradient(
-    to bottom,
-    #F37121 0%,
-    #F37121 6%,
-    #F8F8F8 25%,
-    #F8F8F8 95%,
-    #fff 100%
-  );
+body {
   background-repeat: no-repeat;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
@@ -264,6 +256,23 @@ body{
   position: relative;
   padding-bottom: 300px;
   transition: all ease 0.3s;
+}
+
+.backk{
+  z-index: -1;
+  background: linear-gradient(
+    to bottom,
+    #F37121 0%,
+    #F37121 6%,
+    #F8F8F8 25%,
+    #F8F8F8 95%,
+    #fff 100%
+  );
+
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
 }
 
 .navigation{
@@ -357,7 +366,7 @@ body{
   top: 22px;
  }
 
- body:has(.instagram:hover) {
+ body:has(.instagram:hover) > .backk {
   transition: all ease 0.3s;
   background: linear-gradient(
     to bottom,
@@ -382,7 +391,7 @@ body{
   top: 22px;
 }
 
- body:has(.toktok:hover) {
+ body:has(.toktok:hover) > .backk {
   transition: all ease 0.3s;
   background: linear-gradient(
     to bottom,
@@ -407,7 +416,7 @@ body{
   top: 22px;
 }
 
- body:has(.facebook:hover) {
+ body:has(.facebook:hover) > .backk {
   transition: all ease 0.3s;
   background: linear-gradient(
     to bottom,
@@ -782,7 +791,7 @@ body{
     font-size: 17px;
   }
   body{
-    padding-bottom: 30px;;
+    padding-bottom: 30px;
   }
   .map-wrap{
     height: 500px;
